@@ -1,0 +1,42 @@
+{
+  "key": "CLM-1482",
+  "type": "Test",
+  "status": "In test",
+  "summary": "Member submits a medical claim with supporting document",
+  "acceptance_criteria": [
+    "Member can submit a claim with diagnosis and amount",
+    "Member details auto-fill from member ID",
+    "A supporting document can be attached",
+    "New claims show status \"Pending review\""
+  ],
+  "steps": [
+    {
+      "action": "Log in as a claims member",
+      "expected": "Member dashboard is shown"
+    },
+    {
+      "action": "Open \"New claim\"",
+      "expected": "Empty claim form is displayed"
+    },
+    {
+      "action": "Enter member ID M-10023",
+      "expected": "Member name fills in automatically"
+    },
+    {
+      "action": "Enter diagnosis code and amount",
+      "expected": "Values are accepted without errors"
+    },
+    {
+      "action": "Upload a supporting document",
+      "expected": "File name shows under Attachments"
+    },
+    {
+      "action": "Submit the claim",
+      "expected": "Confirmation with a claim number"
+    },
+    {
+      "action": "Check claim status",
+      "expected": "Status is \"Pending review\""
+    }
+  ]
+}
